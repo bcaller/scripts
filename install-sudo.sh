@@ -47,7 +47,7 @@ sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 # Grub
 add-apt-repository -y ppa:danielrichter2007/grub-customizer
 
-apt-get update && apt-get install -y google-chrome-stable grub-customizer qbittorrent vlc xclip
+apt-get update && apt-get install -y google-chrome-stable grub-customizer qbittorrent vlc xclip zsh
 
 # Reboot
 apt-get upgrade -y

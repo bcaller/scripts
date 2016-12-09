@@ -1,7 +1,7 @@
 # .dotfiles
 git clone --bare https://github.com/bcaller/.dotfiles.git $HOME/.dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bash_aliases
 dotfiles config status.showUntrackedFiles no
 dotfiles diff
 
@@ -49,3 +49,8 @@ gvfs-mime --set x-scheme-handler/magnet qBittorrent.desktop
 # ssh-keygen -t rsa -b 4096 -C "x@y.z"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
+
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+TERMPROF=`dconf list /org/gnome/terminal/legacy/profiles:/`
+dconf write /org/gnome/terminal/legacy/profiles:/"$TERMPROF"custom-command tmux
