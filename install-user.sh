@@ -58,6 +58,7 @@ git cherry-pick git-tag/jtyr-git_tag
 git remote rm git-tag
 git prune
 dotfiles reset --hard
+curl https://cdn.rawgit.com/zsh-users/antigen/v1.3.0/bin/antigen.zsh > antigen.zsh
 
 TERMPROF=`dconf list /org/gnome/terminal/legacy/profiles:/`
 dconf write /org/gnome/terminal/legacy/profiles:/"$TERMPROF"custom-command tmux
