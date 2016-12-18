@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# /lib/systemd/system-sleep/90_restart_network_manager
+
+case "$1" in
+	resume|thaw|post)
+		logger Restarting network manager on $1
+		sudo service network-manager restart
+		;;
+esac
+
+exit 0
